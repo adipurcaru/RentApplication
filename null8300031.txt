@@ -1,0 +1,8 @@
+Current Side
+LOGC_CAB,PROD_STD_NBR,PLG,PROD_STD_DESC
+emi,123456789,emil,emil test prod std desc
+
+
+Future Side
+LOGC_CAB,PROD_STD_NBR,STD_PLG
+AN1,0,emi 

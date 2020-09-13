@@ -1,0 +1,6 @@
+/Users/adipurcaru/Documents/Projects/P2P_Visio_Batch/src/main/java/com/ag/rent/domain/BaseModel.java
+/Users/adipurcaru/Documents/Projects/P2P_Visio_Batch/src/main/java/com/ag/rent/exception/GenericApiException.java
+/Users/adipurcaru/Documents/Projects/P2P_Visio_Batch/src/main/java/com/ag/rent/config/ApplicationProperties.java
+/Users/adipurcaru/Documents/Projects/P2P_Visio_Batch/src/main/java/com/ag/rent/RentApplication.java
+/Users/adipurcaru/Documents/Projects/P2P_Visio_Batch/src/main/java/com/ag/rent/ServletInitializer.java
+/Users/adipurcaru/Documents/Projects/P2P_Visio_Batch/src/main/java/com/ag/rent/aop/AuditAspect.java

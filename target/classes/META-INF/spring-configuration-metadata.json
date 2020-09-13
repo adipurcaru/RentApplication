@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "application",
+      "type": "com.ag.rent.config.ApplicationProperties",
+      "sourceType": "com.ag.rent.config.ApplicationProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "application.file-location",
+      "type": "java.lang.String",
+      "sourceType": "com.ag.rent.config.ApplicationProperties"
+    }
+  ],
+  "hints": []
+}
