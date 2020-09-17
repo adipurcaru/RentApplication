@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="USER")
+@Table(name="User")
 public class User extends BaseModel<String> implements Serializable{
 
 	/* run this sql to create the table
