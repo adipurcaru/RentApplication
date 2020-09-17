@@ -4,8 +4,12 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="USER")
 public class User extends BaseModel<String> implements Serializable{
 
 	/* run this sql to create the table
@@ -33,8 +37,8 @@ public class User extends BaseModel<String> implements Serializable{
 	@Id
 	@Column(name="id")
 	private Long id;
-	
-	@Column(name="username")
+	 
+	@Column(name="username")  
 	private String username;
 	
 	@Column(name="email")
