@@ -1,17 +1,17 @@
 spring:
   application:
-    name: P2PVisio
+    name: rent
   jmx:
-    default-domain: p2pvis
+    default-domain: rent
   # This is for disable security - Comment the following if you want to use security
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
   profiles:
     active: dev
   datasource:
-    url: jdbc:sqlserver://USCLED444.agna.amgreetings.com:62220;databaseName=CommonSQLDevPrj
-    username: yyywildflyd287
-    password: YYY@wildflyd287
+    jdbc-url: jdbc:mysql://field-finders-test.ciq4t7bljsuz.us-west-2.rds.amazonaws.com:3306/field-finders
+    username: admin
+    password: test1234
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     minimum-idle: 0
     maximum-pool-size: 1
@@ -48,11 +48,8 @@ spring:
 
 server:
   port: 8084
-
-
-application:
-  fileLocation: \\uscles611\appsroot\Dept\RPO\RevisionActivity\\DEV\\ #currently you will receive access is denied error. should be fixed soon
-  #\\uscles611\appsroot\Dept\RPO\RevisionActivity
+  servlet:
+    context-path: /rent
 
 management:
   endpoints:
