@@ -4,6 +4,12 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="bookings")
 
 public class Booking implements Serializable{
 	
@@ -11,14 +17,21 @@ public class Booking implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	@Id
 	@Column(name = "id")
 	private long id;
+	@Column(name="ziua")
 	private String ziua;
+	@Column(name="ora")
 	private String ora;
+	@Column(name="customerName")
 	private String customerName;
+	@Column(name="teren")
 	private int teren;
+	@Column(name="pret")
 	private int pret;
-	private String oras;
+	@Column(name="sport")
+	private String sport;
 	
 	public long getId() {
 		return id;
@@ -56,18 +69,19 @@ public class Booking implements Serializable{
 	public void setPret(int pret) {
 		this.pret = pret;
 	}
-	public String getOras() {
-		return oras;
+	
+	public String getSport() {
+		return this.sport;
 	}
-	public void setOras(String oras) {
-		this.oras = oras;
+	public void setSport(String sport) {
+		this.sport = sport;
 	}
 
 	
 	@Override
 	public String toString() {
 		return "Booking [id=" + id + ", ziua=" + ziua + ", ora=" + ora + ", customerName=" + customerName + ", teren="
-				+ teren + ", pret=" + pret + ", oras=" + oras + "]";
+				+ teren + ", pret=" + pret + ", sport=" + sport + "]";
 	}
 	@Override
 	public boolean equals(Object object) {

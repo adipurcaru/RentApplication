@@ -3,13 +3,27 @@ package com.ag.rent.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="terenuri")
 public class Teren {
 
-	private int id;
+	@Id
+	@Column(name="id")
+	private long id;
+	@Column(name="nume")
 	private String nume;
+	@Column(name="adresa")
 	private String adresa;
+	@Column(name="pret")
 	private int pret;
+	@Column(name="sport")
 	private	String sport;
+	@Column(name="oras")
 	private String oras;
 	
 	public String getSport() {
@@ -24,10 +38,10 @@ public class Teren {
 	public void setOras(String oras) {
 		this.oras = oras;
 	}
-	public int getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public String getNume() {
