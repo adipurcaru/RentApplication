@@ -2,6 +2,7 @@ package com.ag.rent.service;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,4 +22,10 @@ public class TerenService {
 	public List<Teren> getAllTerenuri(){
 		return terenRepository.findAll();
 	}
+	
+	public List<Teren> searchByOrasAndSport(String sport, String oras){
+		return terenRepository.findByOrasAndSport(sport, oras);
+	}
+	
+	
 }
