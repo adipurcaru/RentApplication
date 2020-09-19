@@ -11,6 +11,6 @@ public interface TerenRepository extends JpaRepository<Teren, Long>{
 
 //	@Query("SELECT u FROM User u WHERE u.status = ?1 and u.name = ?2")
 	
-	@Query(value = "SELECT * FROM terenuri t WHERE t.sport = ?1 AND t.oras = ?2", nativeQuery = true)
-	List<Teren> findByOrasAndSport(String sport, String oras);
+	@Query(value = "SELECT * FROM terenuri t WHERE t.oras = ?1 AND t.sport = ?2", nativeQuery = true)
+	List<Teren> findByOrasAndSport(String oras, String sport);
 }
