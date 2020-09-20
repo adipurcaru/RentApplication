@@ -7,28 +7,28 @@ import org.hibernate.Criteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ag.rent.domain.Teren;
-import com.ag.rent.repository.TerenRepository;
+import com.ag.rent.domain.Field;
+import com.ag.rent.repository.FieldRepository;
 
 @Service
 public class TerenService {
 
-	private TerenRepository terenRepository;
+	private FieldRepository terenRepository;
 	
 	@Autowired
-	public TerenService(TerenRepository terenRepository) {
+	public TerenService(FieldRepository terenRepository) {
 		this.terenRepository = terenRepository;	
 	}
 	
-	public List<Teren> getAllTerenuri(){
+	public List<Field> getAllTerenuri(){
 		return terenRepository.findAll();
 	}
 	
-	public List<Teren> searchByOrasAndSport(String oras, String sport){
+	public List<Field> searchByOrasAndSport(long oras, long sport){
 		return terenRepository.findByOrasAndSport(oras, sport);
 	}
 	
-	public Optional<Teren> getTerenByID(long id) {
+	public Optional<Field> getTerenByID(long id) {
 		return terenRepository.findById(id);
 	}
 	

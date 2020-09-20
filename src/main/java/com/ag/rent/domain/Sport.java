@@ -13,7 +13,7 @@ public class Sport {
 
 	@Id
 	@Column(name="id")
-	private int id;
+	private long id;
 	@Column(name="name")
 	private String name;
 	@Column(name="created_date")
@@ -23,17 +23,17 @@ public class Sport {
 	
 	public Sport() {}
 	
-	public Sport(int id, String name, Date created_date, String created_by) {
+	public Sport(long id, String name, Date created_date, String created_by) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.created_date = created_date;
 		this.created_by = created_by;
 	}
-	public int getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public String getName() {
