@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name="User")
 public class User extends BaseModel<String> implements Serializable{
@@ -48,6 +50,7 @@ public class User extends BaseModel<String> implements Serializable{
 	private String password;
 	
 	@Column(name="birth_date")
+	//@JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
 	private Date dateOfBirth;
 	
 	public User(long id, String username, String email, String password, Date dateOfBirth) {
@@ -58,6 +61,10 @@ public class User extends BaseModel<String> implements Serializable{
 		this.password = password;
 		this.dateOfBirth = dateOfBirth;
 	}
+	
+	
+	
+	public User() {}
 
 	public long getId() {
 		return id;
