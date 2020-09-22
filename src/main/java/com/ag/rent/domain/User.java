@@ -38,7 +38,7 @@ public class User extends BaseModel<String> implements Serializable{
 
 	@Id
 	@Column(name="id")
-	private Long id;
+	private long id;
 	 
 	@Column(name="username")  
 	private String username;
@@ -53,6 +53,8 @@ public class User extends BaseModel<String> implements Serializable{
 	//@JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss")
 	private Date dateOfBirth;
 	
+	public User() {}
+	
 	public User(long id, String username, String email, String password, Date dateOfBirth) {
 		super();
 		this.id = id;
@@ -62,9 +64,6 @@ public class User extends BaseModel<String> implements Serializable{
 		this.dateOfBirth = dateOfBirth;
 	}
 	
-	
-	
-	public User() {}
 
 	public long getId() {
 		return id;

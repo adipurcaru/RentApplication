@@ -9,7 +9,7 @@ spring:
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://field-finders-test.ciq4t7bljsuz.us-west-2.rds.amazonaws.com:3306/field-finders
+    url: jdbc:mysql://field-finders-test.ciq4t7bljsuz.us-west-2.rds.amazonaws.com:3306/field-finders?zeroDateTimeBehavior=convertToNull
     username: admin
     password: test1234
     driver-class-name: com.mysql.jdbc.Driver
