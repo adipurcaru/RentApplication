@@ -9,9 +9,9 @@ spring:
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://field-finders-test.ciq4t7bljsuz.us-west-2.rds.amazonaws.com:3306/field-finders?zeroDateTimeBehavior=convertToNull
-    username: admin
-    password: test1234
+    url: jdbc:mysql://field-finders-2.ciq4t7bljsuz.us-west-2.rds.amazonaws.com:3306/field-finders?zeroDateTimeBehavior=convertToNull
+    username: adminaccess
+    password: samapispehackeri1
     driver-class-name: com.mysql.jdbc.Driver
     minimum-idle: 0
     maximum-pool-size: 1

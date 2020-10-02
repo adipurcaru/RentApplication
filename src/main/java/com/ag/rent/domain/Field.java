@@ -50,13 +50,14 @@ public class Field {
 	@Column(name="updated_dt")
 	private Date updated_dt;
 	@Column(name="updated_by")
-	private Date updated_by;
+	private String updated_by;
 	
 	public Field() {}
 	
-	public Field(long id, String nume, String adresa, String descriere, Sport sport, long city_id, String sector,
+
+	public Field(long id, String nume, String adresa, String descriere, Sport sport, City city, String sector,
 			byte[] photo1, byte[] photo2, byte[] photo3, byte[] photo4, byte[] photo5, int price_per_hr,
-			Date created_dt, String created_by, Date updated_dt, Date updated_by) {
+			Date created_dt, String created_by, Date updated_dt, String updated_by) {
 		super();
 		this.id = id;
 		this.nume = nume;
@@ -76,27 +77,37 @@ public class Field {
 		this.updated_dt = updated_dt;
 		this.updated_by = updated_by;
 	}
+
+
+
 	public long getId() {
 		return id;
 	}
+
 	public void setId(long id) {
 		this.id = id;
 	}
+
 	public String getNume() {
 		return nume;
 	}
+
 	public void setNume(String nume) {
 		this.nume = nume;
 	}
+
 	public String getAdresa() {
 		return adresa;
 	}
+
 	public void setAdresa(String adresa) {
 		this.adresa = adresa;
 	}
+
 	public String getDescriere() {
 		return descriere;
 	}
+
 	public void setDescriere(String descriere) {
 		this.descriere = descriere;
 	}
@@ -109,76 +120,99 @@ public class Field {
 		this.sport = sport;
 	}
 
-	public City getCity_id() {
+	public City getCity() {
 		return city;
 	}
-	public void setCity_id(City city) {
+
+	public void setCity(City city) {
 		this.city = city;
 	}
+
 	public String getSector() {
 		return sector;
 	}
+
 	public void setSector(String sector) {
 		this.sector = sector;
 	}
+
 	public byte[] getPhoto1() {
 		return photo1;
 	}
+
 	public void setPhoto1(byte[] photo1) {
 		this.photo1 = photo1;
 	}
+
 	public byte[] getPhoto2() {
 		return photo2;
 	}
+
 	public void setPhoto2(byte[] photo2) {
 		this.photo2 = photo2;
 	}
+
 	public byte[] getPhoto3() {
 		return photo3;
 	}
+
 	public void setPhoto3(byte[] photo3) {
 		this.photo3 = photo3;
 	}
+
 	public byte[] getPhoto4() {
 		return photo4;
 	}
+
 	public void setPhoto4(byte[] photo4) {
 		this.photo4 = photo4;
 	}
+
 	public byte[] getPhoto5() {
 		return photo5;
 	}
+
 	public void setPhoto5(byte[] photo5) {
 		this.photo5 = photo5;
 	}
+
 	public int getPrice_per_hr() {
 		return price_per_hr;
 	}
+
 	public void setPrice_per_hr(int price_per_hr) {
 		this.price_per_hr = price_per_hr;
 	}
+
 	public Date getCreated_dt() {
 		return created_dt;
 	}
+
 	public void setCreated_dt(Date created_dt) {
 		this.created_dt = created_dt;
 	}
+
 	public String getCreated_by() {
 		return created_by;
 	}
+
 	public void setCreated_by(String created_by) {
 		this.created_by = created_by;
 	}
+
 	public Date getUpdated_dt() {
 		return updated_dt;
 	}
+
 	public void setUpdated_dt(Date updated_dt) {
 		this.updated_dt = updated_dt;
 	}
-	public Date getUpdated_by() {
+
+	public String getUpdated_by() {
 		return updated_by;
 	}
-	public void setUpdated_by(Date updated_by) {
+
+	public void setUpdated_by(String updated_by) {
 		this.updated_by = updated_by;
 	}
 
@@ -191,10 +225,7 @@ public class Field {
 				+ ", created_dt=" + created_dt + ", created_by=" + created_by + ", updated_dt=" + updated_dt
 				+ ", updated_by=" + updated_by + "]";
 	}
-
-
-
-
+	
 	
 	
 }
